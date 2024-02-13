@@ -1,0 +1,83 @@
+<header>
+  <header class="header">
+    <div class="logo">
+      <a href="#"><img src="src/images/logo.webp" alt="logo" /></a>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a class="header-option" href="#">Inicio</a></li>
+        <li><a class="header-option" href="#">Sobre Nosotros</a></li>
+        <li><a class="header-option" href="#">Portafolio</a></li>
+        <li><a class="header-option" href="#">Servicios</a></li>
+        <li><a class="header-option" href="#">FAQ</a></li>
+        <li><a class="header-option" href="#">Politicas</a></li>
+      </ul>
+    </div>
+  </header>
+</header>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 25px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 300px;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu ul li {
+    list-style: none;
+    margin: 0 10px;
+  }
+  .header-option {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Antonio", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: black;
+    text-transform: uppercase;
+  }
+  .header-option:hover {
+    color: #e8308e;
+    transition: 0.3s;
+    border-bottom: #e8308e 4px solid;
+  }
+  @media screen and (max-width: 1045px){
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .menu ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+
+      margin: 10px 0;
+    }
+    
+  }
+</style>
