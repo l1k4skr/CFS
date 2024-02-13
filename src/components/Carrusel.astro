@@ -1,0 +1,47 @@
+---
+// Importaciones y lógica del script aquí
+const images = [
+  "src/images/Webp-optimizado/foto-1.webp",
+  "src/images/Webp-optimizado/foto-2.webp",
+  "src/images/Webp-optimizado/foto-3.webp",
+  "src/images/Webp-optimizado/foto-4.webp",
+  "src/images/Webp-optimizado/foto-5.webp",
+  "src/images/Webp-optimizado/foto-6.webp",
+  "src/images/Webp-optimizado/foto-7.webp",
+  "src/images/Webp-optimizado/foto-8.webp",
+  "src/images/Webp-optimizado/foto-9.webp",
+];
+---
+<style>
+@import 'bootstrap/dist/css/bootstrap.min.css';
+</style>
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" client:only>
+  <div class="carousel-inner">
+    {images.map((src, index) => (
+      <div class={"carousel-item" + (index === 0 ? " active" : "")}>
+        <img src={src} class="d-block w-100" alt={`Imagen ${index + 1}`}>
+      </div>
+    ))
+    }
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<script type="module">
+document.addEventListener('DOMContentLoaded', () => {
+  import('bootstrap/dist/js/bootstrap.bundle.min.js').then((bootstrap) => {
+    const myCarouselElement = document.querySelector('#carouselExampleAutoplaying');
+    new bootstrap.Carousel(myCarouselElement, {
+      interval: 2000,
+      touch: false
+    });
+  }).catch(error => console.error('Error loading Bootstrap:', error));
+});
+</script>
+
