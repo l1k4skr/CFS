@@ -3,6 +3,7 @@
     <div class="logo">
       <a href="#"><img src="src/images/logo.webp" alt="logo" /></a>
     </div>
+    <button class="display-button">Expandir menu</button>
     <div class="menu">
       <ul>
         <li><a class="header-option" href="#">Inicio</a></li>
@@ -15,6 +16,17 @@
     </div>
   </header>
 </header>
+
+<script>
+
+
+  const button = document.querySelector(".display-button")
+  button.addEventListener("click",  () =>{
+    const menu = document.querySelector(".menu")
+    menu.style
+})  
+</script>
+
 
 <style>
   .header {
@@ -57,6 +69,9 @@
     border-bottom: #e8308e 4px solid;
   }
   @media screen and (max-width: 1045px){
+    .menu{
+      display: none;
+    }
     .header {
       display: flex;
       flex-direction: column;

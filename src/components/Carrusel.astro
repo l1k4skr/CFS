@@ -15,7 +15,8 @@ const images = [
 <style>
 @import 'bootstrap/dist/css/bootstrap.min.css';
 </style>
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" client:only>
+
+<div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel" ">
   <div class="carousel-inner">
     {images.map((src, index) => (
       <div class={"carousel-item" + (index === 0 ? " active" : "")}>
@@ -34,14 +35,14 @@ const images = [
   </button>
 </div>
 <script type="module">
+import '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-  import('bootstrap/dist/js/bootstrap.bundle.min.js').then((bootstrap) => {
     const myCarouselElement = document.querySelector('#carouselExampleAutoplaying');
     new bootstrap.Carousel(myCarouselElement, {
-      interval: 2000,
-      touch: false
+        interval: 5000,
+        touch: false
     });
-  }).catch(error => console.error('Error loading Bootstrap:', error));
 });
 </script>
 
