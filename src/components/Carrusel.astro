@@ -14,9 +14,15 @@ const images = [
 ---
 <style>
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@media screen and (max-width:625px){
+  .carrusel-component{
+    max-;
+  }
+  
+} 
 </style>
 
-<div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel" ">
+<div id="carouselExampleAutoplaying" class="carousel slide carrusel-component" data-bs-ride="carousel" >
   <div class="carousel-inner">
     {images.map((src, index) => (
       <div class={"carousel-item" + (index === 0 ? " active" : "")}>
